@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Simple form validator</title>
+</head>
+
+<body>
+    <section class="container">
+        <div class="row container" style="margin-top: 10rem !important;">
+            <div class="container d-flex justify-content-center col-12">
+                <!--Login form-->
+                <div class="col-9 col-md-6 d-flex justify-content-center loginFormContainer">
+                    <form dir="ltr" class="form-group row">
+                        <div class="col-12 justify-content-center align-items-center">
+                            <!--Name -->
+                            <div class="form-group m-0 inputes">
+                                <h3 class="text-center Form-Title mb-5">Create an account</h3>
+                                <label for="name" class="form-control-label sr-only"> Enter your name 
+
+                                </label>
+                                <input type="text" id="name" class="form-control" autocomplete="none" placeholder="Enter your name">
+                                <p class="validator-text letter-count invalid m-0">name must contains at least 8 character</p>
+                            </div>
+                            <!--smail Input-->
+                            <div class="form-group m-0 inputes">
+                                <label for="emailInp" class="form-control-label sr-only">Enter a valid Email
+                                </label>
+                                <input type="email" id="emailInp" class="form-control" placeholder="Enter a valid Email">
+                                <p class="validator-text valid-email invalid m-0">Email must be valid</p>
+
+                            </div>
+                            <!--password Input-->
+                            <div class="form-group m-0 inputes">
+                                <label for="passowrdInp" class="form-control-label sr-only"> Enter your password
+                                    کنید</label>
+                                <input type="password" id="passowrdInp" class="form-control" autocomplete placeholder="Enter your password">
+                                <p class="validator-text numberCheck invalid m-0">password must contains numbers and alphabets </p>
+
+                            </div>
+                            <!--validators-->
+                            <!--SignIn button-->
+                            <div class="form-group d-flex justify-content-center mt-3 inputes">
+                                <button class="btn btn-success w-100 loginButton" type="button">Sign-in</button>
+                            </div>
+                            <!--Login Options-->
+                            <div class="form-group inputes pt-1">
+                                <a href="#" class="d-block LoginOptions">I already have account </a>
+                                <a href="#" class="d-block mt-2 LoginOptions">I've forgotten my password</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
