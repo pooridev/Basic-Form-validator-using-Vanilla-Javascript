@@ -32,17 +32,6 @@ body {
     background-color: var(--mainBlue);
     border-radius: 7px;
 }
-
-.LoginImageContainer {
-    height: 35rem;
-    background-color: var(--mainBlue);
-    border-radius: 7px 0 0 7px;
-}
-
-.LoginImg {
-    width: 90%;
-}
-
 .inputes {
     position: relative;
     top: 6rem;
@@ -76,50 +65,13 @@ input[type="text"]::placeholder,
     color: #ffffffbe;
 }
 
-.RememberMeLBL {
-    font-size: 17px;
-    font-weight: bolder;
-    color: var(--mainWhite);
-    cursor: pointer;
-    position: relative;
-    left: 7px;
-}
-
-input[type="checkbox"] {
-    width: 17px;
-    height: 17px;
-    visibility: hidden;
-}
-
-input[type="checkbox"]+label:before {
-    border: 1px solid var(--mainWhite);
-    content: "\00a0";
-    display: inline-block;
-    font: 16px/1em sans-serif;
-    height: 16px;
-    margin: 0 .25em 0 0;
-    padding: 0;
-    top: 4.03px;
-    vertical-align: top;
-    width: 16px;
-    position: relative;
-}
-
-input[type="checkbox"]:checked+label:before {
-    background: var(--mainWhite);
-    color: var(--mainOrange);
-    content: "\2713";
-    text-align: center;
-    border: none;
-}
-
 .validator-text {
     color: var(--mainWhite);
     font-size: 0.8rem;
     text-align: left;
     position: relative;
-    margin-bottom: 8px !important;
-    left: 5px;
+    left: -10px;
+    margin: 0 15px 8px 15px !important;
 }
 
 .validIcon::before {

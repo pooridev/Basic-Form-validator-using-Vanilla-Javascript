@@ -1,21 +1,20 @@
 const usernameInput = document.getElementById('name');
 const emailInput = document.getElementById('emailInp');
-const passwordInput = document.getElementById('passowrdInp');
-const letterCount = document.querySelector('.letter-count');
+//const passwordInput = document.getElementById('passowrdInp');
+const userNameValidatorText = document.querySelector('.letter-count');
 const numberCheck = document.querySelector('.numberCheck');
 const validEmail = document.querySelector('.valid-email');
-const validUserName = /^[0-9].*$/;
-const numberCheckPath = /[0-9]/g;
+//const passwordValidatorPath = /^[0-9a-zA-Z]+$/;
 const emailFormatpath = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 //check number
-passwordValidator = () => {
-	passwordInput.value.match(numberCheckPath)
+/*passwordValidator = () => {
+	passwordInput.value.match(passwordValidatorPath)
 		? numberCheck.classList.replace('invalid', 'validIcon')
 		: numberCheck.classList.replace('validIcon', 'invalid');
-};
-passwordInput.addEventListener('input', passwordValidator);
+};*/
+//passwordInput.addEventListener('input', passwordValidator);
 
-//checking email format
+//check email format
 checkEmailFormat = () => {
 	emailInput.value.match(emailFormatpath)
 		? validEmail.classList.replace('invalid', 'validIcon')
@@ -24,11 +23,11 @@ checkEmailFormat = () => {
 
 emailInput.addEventListener('input', checkEmailFormat);
 
-//letter counter
+// check user name input
 letterCountCheck = () => {
 	usernameInput.value.length > 8
-		? letterCount.classList.replace('invalid', 'validIcon')
-		: letterCount.classList.replace('validIcon', 'invalid');
+		? userNameValidatorText.classList.replace('invalid', 'validIcon')
+		: userNameValidatorText.classList.replace('validIcon', 'invalid');
 };
 
 usernameInput.addEventListener('input', letterCountCheck);
