@@ -1,69 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+			rel="stylesheet"
+		/>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Simple form validator</title>
-</head>
+		<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+		<link rel="stylesheet" href="/css/style.css" />
+		<title>Simple form validator</title>
+	</head>
 
-<body>
-    <section class="container">
-        <div class="row container" style="margin-top: 10rem !important;">
-            <div class="container d-flex justify-content-center col-12">
-                <!--Login form-->
-                <div class="col-9 col-md-6 d-flex justify-content-center loginFormContainer">
-                    <form dir="ltr" class="form-group row">
-                        <div class="col-12 justify-content-center align-items-center">
-                            <!--Name -->
-                            <div class="form-group m-0 inputes">
-                                <h3 class="text-center Form-Title mb-5">Create an account</h3>
-                                <label for="name" class="form-control-label sr-only"> Enter your name 
-
-                                </label>
-                                <input type="text" id="name" class="form-control" autocomplete="none" placeholder="Enter your name">
-                                <p class="validator-text letter-count invalid m-0">name must contains at least 8 character</p>
-                            </div>
-                            <!--smail Input-->
-                            <div class="form-group m-0 inputes">
-                                <label for="emailInp" class="form-control-label sr-only">Enter a valid Email
-                                </label>
-                                <input type="email" id="emailInp" class="form-control" placeholder="Enter a valid Email">
-                                <p class="validator-text valid-email invalid m-0">Email must be valid</p>
-
-                            </div>
-                            <!--password Input-->
-                            <div class="form-group m-0 inputes">
-                                <label for="passowrdInp" class="form-control-label sr-only"> Enter your password
-                                    کنید</label>
-                                <input type="password" id="passowrdInp" class="form-control" autocomplete placeholder="Enter your password">
-                                 <!-- <p class="validator-text numberCheck invalid m-0">password must contains numbers and alphabets </p>  -->
-
-                            </div>
-                            <!--validators-->
-                            <!--SignIn button-->
-                            <div class="form-group d-flex justify-content-center mt-3 inputes">
-                                <button class="btn btn-success w-100 loginButton" type="button">Sign-in</button>
-                            </div>
-                            <!--Login Options-->
-                            <div class="form-group inputes pt-1">
-                                <a href="#" class="d-block LoginOptions">I already have account </a>
-                                <a href="#" class="d-block mt-2 LoginOptions">I've forgotten my password</a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
-</body>
-
+	<body class="bg-gray-300">
+		<main class="flex justify-center mt-24">
+			<form
+				id="register-form"
+				class="p-8 bg-white rounded-lg max-w-md pb-10 dark:bg-gray shadow"
+			>
+				<figure class="flex justify-center mb-12">
+					<h1>Logo</h1>
+				</figure>
+				<input
+					type="text"
+					id="username-input"
+					class="h-12 border border-gray-300 bg-gray-lightest dark:placeholder-gray-800 text-gray-900 focus:border-0 focus:ring-2 rounded w-full px-3 focus:text-black focus:border-blue-100 focus:outline-none"
+					placeholder="نام کاربریتو وارد کن"
+				/>
+				<input
+					type="text"
+					id="email-input"
+					class="h-12 border border-gray-300 bg-gray-lightest dark:placeholder-gray-dark text-gray-900 focus:border-0 focus:ring-2 mt-3 rounded w-full px-3 focus:text-black focus:border-blue-100 focus:outline-none"
+					placeholder="ایمیلتو وارد کن"
+				/>
+				<input
+					type="password"
+					id="password-input"
+					class="h-12 border border-gray-300 bg-gray-lightest dark:placeholder-gray-dark text-gray-900 focus:border-0 focus:ring-2 mt-3 rounded w-full px-3 focus:text-black focus:border-blue-100 focus:outline-none"
+					placeholder="رمز عبورتو وارد کن"
+				/>
+				<input
+					type="password"
+					id="password2-input"
+					class="h-12 border border-gray-300 bg-gray-lightest placeholder-gray-400 text-gray-900 focus:border-0 focus:ring-2 mt-3 rounded w-full px-3 focus:text-black focus:border-blue-100 focus:outline-none"
+					placeholder="رمز عبورتو دوباره وارد کن"
+				/>
+				<!--Register button-->
+				<button
+					type="submit"
+					class="register-button uppercase h-12 mt-3 text-white font-xl w-full rounded bg-green-500 focus:outline-none focus:ring-2 focus:ring-green-light"
+				>
+					ثبت نام
+				</button>
+				<!--/Register button-->
+				<div class="flex justify-around items-center mt-9 mb-2">
+					<span
+						class="border-1 border-gray w-full h-1 bg-gray-600"
+					></span>
+					<span
+						class="quick-sign-in-title p-0 text-gray-500 font-bold mb-1 w-full text-center"
+						>ثبت نام سریع</span
+					>
+					<span
+						class="border-1 border-gray w-full h-1 bg-gray-600"
+					></span>
+				</div>
+				<!--quick sign up options-->
+				<aside class="flex">
+					<button
+						id="sign-up__github"
+						title="ثبت نام با گیت هاب"
+						class="uppercase focus:ring-2 focus:ring-gray-light flex items-center justify-center h-12 mt-3 text-white w-full bg-gray-600 focus:outline-none hover:bg-gray-700"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="40"
+							height="40"
+							viewBox="0 0 24 24"
+							style="fill: #ffffff; transform: -ms-filter"
+						>
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M12.026,2c-5.509,0-9.974,4.465-9.974,9.974c0,4.406,2.857,8.145,6.821,9.465 c0.499,0.09,0.679-0.217,0.679-0.481c0-0.237-0.008-0.865-0.011-1.696c-2.775,0.602-3.361-1.338-3.361-1.338 c-0.452-1.152-1.107-1.459-1.107-1.459c-0.905-0.619,0.069-0.605,0.069-0.605c1.002,0.07,1.527,1.028,1.527,1.028 c0.89,1.524,2.336,1.084,2.902,0.829c0.091-0.645,0.351-1.085,0.635-1.334c-2.214-0.251-4.542-1.107-4.542-4.93 c0-1.087,0.389-1.979,1.024-2.675c-0.101-0.253-0.446-1.268,0.099-2.64c0,0,0.837-0.269,2.742,1.021 c0.798-0.221,1.649-0.332,2.496-0.336c0.849,0.004,1.701,0.115,2.496,0.336c1.906-1.291,2.742-1.021,2.742-1.021 c0.545,1.372,0.203,2.387,0.099,2.64c0.64,0.696,1.024,1.587,1.024,2.675c0,3.833-2.33,4.675-4.552,4.922 c0.355,0.308,0.675,0.916,0.675,1.846c0,1.334-0.012,2.41-0.012,2.737c0,0.267,0.178,0.577,0.687,0.479 C19.146,20.115,22,16.379,22,11.974C22,6.465,17.535,2,12.026,2z"
+							></path>
+						</svg>
+					</button>
+					<button
+						id="sign-up__google"
+						title="ثبت نام با گوگل "
+						class="uppercase focus:ring-2 focus:ring-red-light flex items-center justify-center h-12 mt-3 text-white w-full bg-red-500 focus:outline-none hover:bg-red-600"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="40"
+							height="40"
+							viewBox="0 0 24 24"
+							style="fill: #ffffff; transform: -ms-filter "
+						>
+							<path
+								d="M20.283,10.356h-8.327v3.451h4.792c-0.446,2.193-2.313,3.453-4.792,3.453c-2.923,0-5.279-2.356-5.279-5.28 c0-2.923,2.356-5.279,5.279-5.279c1.259,0,2.397,0.447,3.29,1.178l2.6-2.599c-1.584-1.381-3.615-2.233-5.89-2.233 c-4.954,0-8.934,3.979-8.934,8.934c0,4.955,3.979,8.934,8.934,8.934c4.467,0,8.529-3.249,8.529-8.934 C20.485,11.453,20.404,10.884,20.283,10.356z"
+							></path>
+						</svg>
+					</button>
+				</aside>
+				<!--/quick sign up options-->
+			</form>
+		</main>
+		<script src="script.js"></script>
+	</body>
 </html>
