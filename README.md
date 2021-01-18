@@ -1,1 +1,1 @@
-# Form-validator-using-Vanilla-Javascript
+# Simple-Form-validator-using-Vanilla-Javascript
