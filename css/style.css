@@ -27,13 +27,18 @@ body {
 
 .valid {
 	box-shadow: 0px 0px 4px #059669;
+	border-color: transparent !important;
 }
 .invalid {
 	box-shadow: 0px 0px 4px #ef4444;
+	border-color: transparent !important;
 }
-input.invalid::placeholder {
+.invalid::placeholder {
 	color: #ef4444 !important;
 	opacity: 0.8;
+}
+.invalid:focus {
+
 }
 input.valid::placeholder {
 	color: #059669 !important;
